@@ -13,12 +13,22 @@ Install-Package Identity.Extensions
 # Getting started with Identity.Extensions
 
   * Change IdentityModel.cs
+  
   Extend User model by inherited from IdentityUser(Optional); 
+  
   Extend Role model by inherited from ExtendedRole(Optional);
-  CreExteate ApplicationDbContext : ExtendedDbContext<ApplicationUser,ApplicationRole> if User/Role model is extended;
+  
+  Create ApplicationDbContext : ExtendedDbContext<ApplicationUser,ApplicationRole> using IdentityUser/ExtendedRole model or extended User/Role model inherited from them;
   * Change IdentityConfig.cs
-  Extend ApplicationSignInManager/ApplicationPermissionManager/ApplicationRoleManager if User/Role model is extended;
+  Create ApplicationUserManager/ApplicationSignInManager/ApplicationPermissionManager/ApplicationRoleManager using IdentityUser/ExtendedRole model or extended User/Role model inherited from them;
   * Call app.UsePermissionManager(ApplicationPermissionManager.Create()); in Startup.cs
+  * Change Startup.Auth.cs
+```xml
+app.CreatePerOwinContext(ApplicationDbContext.Create);
+app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
+app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
+```
   * Apply attribute to Class/Method to authorize access
 ```xml
 [AuthorizeRolePermission("Admin,SecurityAdmin")]
