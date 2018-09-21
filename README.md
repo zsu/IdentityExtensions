@@ -20,6 +20,7 @@ Install-Package Identity.Extensions
   
   Create ApplicationDbContext : ExtendedDbContext<ApplicationUser,ApplicationRole> using IdentityUser/ExtendedRole model or extended User/Role model inherited from them;
   * Change IdentityConfig.cs
+  
   Create ApplicationUserManager/ApplicationSignInManager/ApplicationPermissionManager/ApplicationRoleManager using IdentityUser/ExtendedRole model or extended User/Role model inherited from them;
   * Call app.UsePermissionManager(ApplicationPermissionManager.Create()); in Startup.cs
   * Change Startup.Auth.cs
