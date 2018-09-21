@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Identity.Extensions</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Zhicheng Su</authors>
     <owners>Zhicheng Su</owners>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
@@ -22,6 +22,6 @@
     </dependencies>
   </metadata>
   	<files>
-		<file src="..\Identity.Extensions\bin\Release\Identity.Extensions.dll" target="lib\net45\Identity.Extensions.dll" />
+		<file src="..\Identity.Extensions\bin\Release\Identity.Extensions.dll" target="lib\net46\Identity.Extensions.dll" />
 	</files>
 </package>
