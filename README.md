@@ -23,7 +23,6 @@ Install-Package Identity.Extensions
 ```xml
 [AuthorizeRolePermission("Admin,SecurityAdmin")]
 ```
-```xml
 Or call the async function to check authorization:
 ```xml
 HttpContext.Current.GetPermissionManager().AuthorizePermissionAsync(new List<string> { "Admin" }).Result
