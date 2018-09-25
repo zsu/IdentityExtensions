@@ -132,6 +132,7 @@ namespace Identity.Extensions
 
         public virtual IDbSet<TPermission> Permissions { get; set; }
         public override IDbSet<TRole> Roles { get; set; }
+        public virtual IDbSet<TRolePermission> RolePermissions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

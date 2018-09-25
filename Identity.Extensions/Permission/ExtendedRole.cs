@@ -20,6 +20,10 @@ namespace Identity.Extensions
         public string Description { get; set; }
 
         public virtual ICollection<TRolePermission> Permissions { get; set; }
+        public ExtendedRole():base()
+        {
+            Permissions = new List<TRolePermission>();
+        }
 
     }
 }
