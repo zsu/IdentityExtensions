@@ -1,3 +1,6 @@
+[![NuGet](https://img.shields.io/nuget/v/Identity.Extensions.svg)](https://www.nuget.org/packages/Identity.Extensions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 # What is IdentityExtensions
 
 Asp.Net Identity permission extesions. Added permissions to roles implementation.
